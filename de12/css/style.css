@@ -27,7 +27,7 @@ html, body {
 	color: #ffffff;
     margin-left: 15px;
     margin-bottom: 40px;
-	background: #646f7f;
+	background: #2e4e72;
 }
 h1{
     text-indent: 0em;
@@ -46,6 +46,9 @@ div{
 p{
     margin-top: 30px;
 }
+pp{
+    margin-top: 70px;
+}
 span.blackback{
     text-indent: 3em;
     background: #393939;
@@ -56,4 +59,46 @@ p1{
 }
 orange{
     color: #FFAD09;
+}
+a{
+    color: #80bef5;
+}
+a:visited{
+    color: #faa4ae;
+}
+sen{
+    border-bottom: dashed 3px #ffffff;
+}
+kasen{
+    border-bottom: solid 3px #cce4ff;
+  position: relative;
+}
+kasen:after{
+    position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #688cfa;
+  bottom: -3px;
+  width: 20%;
+}
+kasen2{
+    border: solid 3px #ffffff;/*線色*/
+    padding: 0.1em;/*文字周りの余白*/
+    border-radius: 0.5em;/*角丸*/
+}
+midashi{
+    display: inline-block;
+    position: relative;
+    padding: .5em .7em;
+    border-radius: 30px 0 0 30px;
+    background-color: #ffffff;
+    color: #2e4e72;
+}
+midashi:before{ content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 13px;
+    border-radius: 50%;
+    background: #2e4e72;
 }
