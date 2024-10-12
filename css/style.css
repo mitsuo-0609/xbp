@@ -1,8 +1,6 @@
 @charset "utf-8";
-/* 冒頭でimport */
 @import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
-/* フォントを指定したいところで */
 
 logo img{
     border-radius: 50%;
@@ -17,27 +15,64 @@ logotohome img{
     height: 70px;
     object-fit: cover; /* 画像のトリミング */
 }
-
+header{
+    text-align: center;
+    color: #efefef;
+    font-family: "Syncopate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #1b2e52;
+    padding: 10px;
 }
-
+square{
+    font-size: 12px;
+    background-color: #fffffff1;
+    color: #1b2e52;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+header-text{
+    color: #fffffff1;
+    text-decoration: none;
+}
+a{
+    color: #1b2e52;
+}
 
 
 /* ========== common ========== */
 html, body {
-	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
-    margin-left: 15px;
-    margin-bottom: 40px;
-	background: #efefef;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 h1{
-    text-indent: 0em;
+    text-align: center;
+    color: #fffffff1;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+    font-style: normal;
+    background-image:url(../images/kabegami_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 40px;
+    padding-bottom: 0px;
 }
 h2{
-    margin-left: 1em;
-    margin-top: 1em;
+    text-align: center;
+    color: #1b2e52;
+    font-size: 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
+
+    
 h3{
     margin-left: 2em;
 }
@@ -53,4 +88,62 @@ span.blackback{
     background: #393939;
     color: #efefef;
 }
-
+midashi-1{
+    padding: 1rem;
+    border-top: 3px solid #fffffff1;
+    border-bottom: 3px solid #fffffff1;
+}
+m2 {
+    position: relative;
+    line-height: 1.4;
+    padding:0.25em 1em;
+    display: inline-block;
+    top:0;
+  }
+  
+ m2:before, m2:after { 
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+  }
+ m2:before {
+    border-left: solid 2px #1b2e52;
+    border-top: solid 2px #1b2e52;
+    border-bottom: solid 2px #1b2e52;
+    left: 0;
+  }
+ m2:after {
+    content: '';
+    border-top: solid 2px #1b2e52;
+    border-right: solid 2px #1b2e52;
+    border-bottom: solid 2px #1b2e52;
+    right: 0;
+}
+up{
+    position: relative;bottom: 60px;
+}
+a.btn_02 {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+    font-size: x-large;
+	width: 80%;
+	margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top: 30px;
+    padding-bottom: 30px;
+	font-weight: bold;
+	border: 2px solid #1b2e52;
+	background: #1b2e52;
+	color: #fffffff1;
+	transition: 0.5s;
+}
+a.btn_02:hover {
+	color: #1b2e52;
+	background: #fffffff1;
+}
