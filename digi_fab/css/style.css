@@ -40,11 +40,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    background-color: #c5c5c5;
+    background-color: #fffffff1;
 }
 h1{
     text-align: center;
-    color: #c5c5c5;
+    color: #fffffff1;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 800;
     font-size: 65px;
@@ -59,7 +59,7 @@ h1{
 }
 h2{
     text-align: center;
-    color: #1b2e52;
+    color: #fffffff1;
     font-size: 30px;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -91,7 +91,7 @@ pp{
 span.blackback{
     text-indent: 3em;
     background: #393939;
-    color: #efefef;
+    color: #fffffff1;
 }
 p1{
     font-size: larger;
@@ -128,7 +128,7 @@ midashi {
     padding-bottom: 6px;
     padding-left: 30px;
     padding-right: 30px;
-    color: #c5c5c5;
+    color: #fffffff1;
     border-radius: 10px;
     background: #1b2e52;
   }
@@ -187,12 +187,12 @@ a.btn_02 {
 	font-weight: bold;
 	border: 2px solid #1b2e52;
 	background: #1b2e52;
-	color: #c5c5c5;
+	color: #fffffff1;
 	transition: 0.5s;
 }
 a.btn_02:hover {
 	color: #1b2e52;
-	background: #c5c5c5;
+	background: #fffffff1;
 }
 b{
     font-weight: 800;
