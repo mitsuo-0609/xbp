@@ -17,7 +17,7 @@ logotohome img{
 }
 header{
     text-align: center;
-    color: #c5c5c5;
+    color: #fffffff1;
     font-family: "Syncopate", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -32,7 +32,7 @@ square{
     padding-right: 5%;
 }
 header-text{
-    color: #c5c5c5;
+    color: #fffffff1;
     text-decoration: none;
 }
 a{
@@ -45,14 +45,14 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    background-color: #c5c5c5;
+    background-color: #fffffff1;
 }
 main{
     margin-left: 20px;
 }
 h1{
     text-align: center;
-    color: #c5c5c5;
+    color: #fffffff1;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 800;
     font-size: 70px;
@@ -90,8 +90,8 @@ p{
 }
 midashi-1{
     padding: 1rem;
-    border-top: 3px solid #c5c5c5;
-    border-bottom: 3px solid #c5c5c5;
+    border-top: 3px solid #fffffff1;
+    border-bottom: 3px solid #fffffff1;
 }
 m2 {
     position: relative;
@@ -139,10 +139,10 @@ a.btn_02 {
 	font-weight: bold;
 	border: 2px solid #1b2e52;
 	background: #1b2e52;
-	color: #c5c5c5;
+	color: #fffffff1;
 	transition: 0.5s;
 }
 a.btn_02:hover {
 	color: #1b2e52;
-	background: #c5c5c5;
+	background: #fffffff1;
 }
