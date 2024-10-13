@@ -19,7 +19,7 @@ logotohome img{
 }
 header{
     text-align: center;
-    color: #c5c5c5;
+    color: #fffffff1;
     font-family: "Syncopate", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@ header{
     padding: 10px;
 }
 header-text{
-    color: #c5c5c5;
+    color: #fffffff1;
     text-decoration: none;
 }
 
