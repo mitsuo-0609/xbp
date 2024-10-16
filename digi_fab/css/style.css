@@ -42,6 +42,9 @@ body {
     font-style: normal;
     background-color: #fffffff1;
 }
+main{
+    padding-right: 30px;
+}
 h1{
     text-align: center;
     color: #fffffff1;
