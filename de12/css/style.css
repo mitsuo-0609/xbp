@@ -110,16 +110,7 @@ sen{
     border-bottom: dashed 3px #ffffff;
 }
 kasen{
-    border-bottom: solid 3px #cce4ff;
-  position: relative;
-}
-kasen:after{
-    position: absolute;
-  content: " ";
-  display: block;
-  border-bottom: solid 3px #688cfa;
-  bottom: -3px;
-  width: 20%;
+    background: linear-gradient(transparent 70%, #ffe380 70%);
 }
 kasen2{
     border: solid 3px #ffffff;/*線色*/
@@ -200,10 +191,13 @@ a.btn_02:hover {
 }
 b{
     font-weight: 800;
-    font-size: 25px;
+    font-size: 23px;
     margin-bottom: 20px;
 }
 img{
     padding-top: 20px;
     padding-bottom: 15px;
+}
+haikei{
+    background: #92a2aa;
 }

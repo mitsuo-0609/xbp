@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>ゲーム</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<header>
+  <font size="6"><a href="../index.html"><header-text>X-BUSINESS PROGRAM</header-text></a></font><br>
+</header>
+<body>
+    <h1>プログラミング - ゲーム</h1>
+    <main>
+     <h3><midashi>ゲームについて</midashi></h3>
+     <div>
+       今回はpythonを使ったオリジナルのゲームを作成しました。<br>
+       私が作ったのは、競馬をテーマに乱数をふんだんに使用した運100%のクソゲーです。題して<b>「運ゲー３連単」</b>でございます。<br>
+       ４頭立てのレースで、特に何も考えずに３連単を一点買いするだけのシンプルなゲームとなっております。<br>
+       毎回同じ番号で買うのもよし、バラバラに買うもよし、戦略はさまざまです。購入金額も決められますので、好きなだけ賭けちゃってください。<br>
+       みなさまの運にもよりますが、<kasen>26回に１回は当たります。</kasen>確率にして約3.8%、それなりです。<br>
+       ちなみに、オッズもランダムに変動しますのでより高い配当を目指してがんばってくださいね！
+     </div>
+     <h3><midashi>ソースコード</midashi></h3>
+     <div>
+     <pre><code>
+#import系は最初にまとめておくと楽です。
+import random
+import time
+print("＝＝＝ 運ゲー3連単 ＝＝＝")
+#ランダムに出力するレース名のリストです。（カスタム可能）
+race=["京都11R ミニマイルチャンピオンシップ（芝1600m）","阪神11R ミニ大阪杯（芝2000m）","東京11R ミニジャパンカップ（芝2400m）","中山11R ミニ有馬記念（芝2500m）","大井11R ミニ東京大賞典（ダ2000m）"]
+print(random.choice(race))
+print("ーーー 出馬表 ーーー")
+#ランダムに出力する競走馬名のリストです。（カスタム可能）
+horse=["イクイノックス","ウシュバテソーロ","エフフォーリア","クロノジェネシス","グランアレグリア","コントレイル","シャフリヤール","ジャックドール","スターズオンアース","セリフォス","ソダシ","タスティエーラ","タイトルホルダー","ダノンザキッド","デアリングタクト","ドウデュース","ドゥラエレーデ","べラジオオペラ","パンサラッサ","リバティアイランド",]
+selected_horse=random.sample(horse,4)
+#ここで順番に数字が振られるようにして、馬番として表示しています。
+for i, horse in enumerate(selected_horse,start=1):
+    print(f"{i} - {horse}")
+print("ーーーーーーーーーー")
+number_1=int(input("特に何も考えずに3連単を一点買いしましょう！\n" "1～4番の中で、1着になると思う馬番を半角で入力してください:"))
+number_2=int(input("1～4番の中で、すでに選んだ馬番以外から、2着になると思う馬番を半角で入力してください:"))
+number_3=int(input("1～4番の中で、すでに選んだ馬番以外から、3着になると思う馬番を半角で入力してください:"))
+#inputでそれぞれ入力された数値は一つの変数としてまとめておきます。
+user_numbers=[number_1, number_2, number_3]
+buy=int(input("購入金額を半角で入力してください:"))
+print(number_1,"→",number_2,"→",number_3,"の３連単を",buy,"円購入しました！\r\n")
+#time.sleep(秒数)で指定した秒数後に次へと進むようにできます。
+time.sleep(2)
+print("スタートしました！！\n""レースの結果は...\r\n")
+time.sleep(2)
+#着順をランダムに決定します。
+rankings=random.sample(range(1, 5), 3)
+for i, num in enumerate(rankings, start=1):
+    print(f"{i}着：{num}")
+print("ーーーーーーーーーー")
+#着順を3連単風に表示し、そのオッズをまたまたランダムで決定します。
+arrow_format=' → '.join(map(str, rankings))
+random_integer=random.randint(10,100000)
+print("3連単:",arrow_format,"オッズ:",random_integer,"倍\r\n")
+#入力された予想の馬番と着順が完全に合っているかどうかを判断して、結果を出力します。
+if user_numbers==rankings:
+    print("3連単的中おめでとうございます！ 払戻金は",buy*random_integer,"円です！")
+else:
+    print("残念...またチャレンジしてくださいね")
+     </code></pre>
+     </div>
+     <h3><midashi>作成にあたって</midashi></h3>
+     <div>
+       このゲームの作成にあたり、私はChatGPTを活用しました。<br>
+       たとえば「pythonで『1→2→3』という風にランダムで出力した３つの数値を表示する方法」などのように聞くと、わかりやすくコードを教えてくれます。<br>
+       ただ、すべてを頼ってしまうと自分のためになりませんし、エラー時にどこをどうすればいいか分からない、なんてこともあり得るのでやめましょう...<br>
+       できそうな部分は自分の力で書いてみて、分からないところをChatGPTに教えてもらう。そしてそれを応用してみる、というようなプロセスを踏んでみてください！<br>
+       <br>
+       そのほか、ちょっとしたドキュメンテーションなどは上記のコードにメモしてありますので、そちらもチェックしていただければ幸いです。<br>
+       ぜひ遊んでみてください！
+     </div>
+    </main>
+    <br>
+    <br>
+</body>
+</html>
