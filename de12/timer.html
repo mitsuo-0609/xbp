@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>タイマー</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<header>
+  <font size="6"><a href="../index.html"><header-text>X-BUSINESS PROGRAM</header-text></a></font><br>
+</header>
+<body>
+    <h1>プログラミング２ - タイマー</h1>
+    <main>
+     <h3><midashi>タイマーについて</midashi></h3>
+     <div>
+       今回はpythonおよびライブラリを使ってPC作業用のタイマーを作りました。<br>
+       みなさんもPCで作業をすることが多いかと思いますが、ついつい長時間やってしまうということもあるのではないでしょうか。<br>
+       <br>
+       この作業用タイマーを使えば、指定した分数が立つと<kasen>ポップアップでお知らせ</kasen>してくれます。<br>
+       適度に休憩をはさみたいときにはもちろん、メッセージは変更可能なので、さまざまな用途で使用できます。<br>
+      </div>
+     <h3><midashi>ソースコード</midashi></h3>
+     <div>
+     <pre><code>
+import time #タイマー機能用
+import tkinter as tk #ポップアップ表示用
+from tkinter import messagebox #tkinterにはいくつか種類がありますが通常ポップアップはmessageboxを使用します
+      
+minutes=int(input("タイマーを設定する分数を入力してください："))
+print(minutes,"分のタイマーを設定しました！")
+timer=minutes*60 #入力された数値を秒から分に変換します
+      
+time.sleep(timer) #time.sleepで処理を一時停止します
+      
+#メインウィンドウを非表示にします
+root = tk.Tk()
+root.withdraw()
+      
+#ポップアップウィンドウの設定
+root.attributes("-topmost", True)  #最前面に来るように固定します
+messagebox.showinfo("タイマー", "入力した時間が経過しました。\n""いったん休憩しませんか？") #("ポップアップのタイトル", 表示メッセージ)
+      
+#プログラムを終了させます
+root.destroy()
+</code></pre>
+</div>
+     <h3><midashi>作成にあたって</midashi></h3>
+     <div>
+       授業で教わったことを活用し「time」と「tkinter」の２種類のライブラリを使用しました。<br>
+       当初の案では、spotifyなどのAPIなどを利用したツールを作成するつもりでしたが、あえなく断念...<br>
+       こうした企業のAPIは有料だったり、無料でも機能などが制限される可能性が高いです。気を付けましょう。<br>
+       <br>
+       ですが、Pythonに標準で入っているライブラリだけでも（データ分析などはできませんが）かなり多くのことができます！<br>
+       なにをやろうか迷った方、難しくて頓挫している方などは、まずはシンプルなライブラリから試してみてはいかかでしょうか。
+     </div>
+     <h3><midashi>参考にさせていただいたサイト</midashi></h3>
+     <div>
+       ①<a href="https://yamaccu.github.io/tils/20221010-Python-popup" target="_blank">pythonで作成したCUIでポップアップやファイルダイアログを使う</a><br>
+       ②<a href="https://www.sejuku.net/blog/75068" target="_blank">【Python入門】標準ライブラリとは？知っておくと便利な関数5選</a><br>
+       ③<a href="https://zenn.dev/kazmaendo/articles/4e126a4fda31e3" target="_blank">APIとは？を整理してみる（Web API，ライブラリとの違いなど）</a>
+      </div>
+      </main>
+    <br>
+    <br>
+</body>
+</html>
