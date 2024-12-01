@@ -112,6 +112,9 @@ sen{
 kasen{
     background: linear-gradient(transparent 70%, #ffe380 70%);
 }
+kasen_ao{
+    background: linear-gradient(transparent 70%, #afaef7 70%);
+}
 kasen2{
     border: solid 3px #ffffff;/*線色*/
     padding: 0.1em;/*文字周りの余白*/
