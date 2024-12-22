@@ -201,3 +201,43 @@ img{
     padding-top: 20px;
     padding-bottom: 15px;
 }
+a.btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px; /* ボタン幅 */
+    color: #1b2e52; /* 文字色 */
+    border: 2px solid #1b2e52; /* 線幅・種類・色 */
+    background: #fffffff1; /* 背景色 */
+    padding: 1em 2em;
+    font-weight: bold; /* 文字の太さ */
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* マウスオーバーした際のデザイン */
+  a.btn:hover {
+    color: #fffffff1; /* 文字色 */
+    background: #1b2e52; /* 背景色 */
+  }
+  a.btn_03 {
+	display: inline-block;
+	text-decoration: none;
+    text-align: center;
+	width: 100%;
+    max-width: 350px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+	padding: 1rem 2rem;
+	border: 2px solid #1b2e52;
+	color: #1b2e52;
+	border-radius: 10vh;
+    transition: 0.5s;
+}
+a.btn_03:hover {
+	color: #fffffff1;
+	background: #1b2e52;
+}
