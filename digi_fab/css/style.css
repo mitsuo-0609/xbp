@@ -241,3 +241,13 @@ a.btn_03:hover {
 	color: #fffffff1;
 	background: #1b2e52;
 }
+.box2 {
+    padding: 1em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #1b2e52;/*文字色*/
+    background: #fffffff1;
+    border: solid 3px #1b2e52;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    max-width: 98%;
+}
