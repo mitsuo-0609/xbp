@@ -52,21 +52,13 @@ h1{
     font-weight: 800;
     font-size: 70px;
     font-style: normal;
-    background-image:url(../images/room_green.jpg);
+    background-image:url(../images/back.jpg);
     background-repeat: no-repeat;
-    
     background-size: 100%;
     width: 100%;
-    padding-top: 100px;
-    padding-bottom: 10px;
-    text-shadow: 5px 5px 20px#000000;
-    margin: 0;
-}
-copy{
-    font-size: 10px;
-    position: relative;
-    top: 20px;
-    left: 42%;
+    height: 300px;
+    padding-top: 85px;
+    text-shadow:  5px 5px 20px#000000;
 }
 h2{
     text-align: center;
