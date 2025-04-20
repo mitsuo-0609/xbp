@@ -260,7 +260,7 @@ a.btn_03:hover {
     background: #fffffff1;
     border: solid 3px #1b2e52;/*線*/
     border-radius: 10px;/*角の丸み*/
-    max-width: 98%;
+    max-width:fit-content;
 }
 a.btn_02 {
 	display: block;
