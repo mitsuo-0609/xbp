@@ -18,74 +18,103 @@
 <body>
     <h1>プロジェクトノート</h1>
     <main>
-     <h3><midashi>アイデアスケッチ</midashi></h3>
+     <h3><midashi>スケッチ＆概要</midashi></h3>
      <div>
-     <img src="./images/pnote_sketch.jpg" width="70%"><br>
-     今回は①の競馬ゲームの制作にチャレンジします！<br>
-     ※変更の可能性はゼロではない。
-     </div>
-     <h3><midashi>概要</midashi></h3>
-     <div>
-     「あの熱狂を、手元に。」をコンセプトに、競馬愛を詰め込んだ作品にします。<br>
-     ※概要も随時変更を加えていく予定です。
+     <img src="./images/pnote_sketch.jpg" width="60%"><br>
+     今回は①競馬ゲームを制作することにしました。<br>
+     ミニサイズでも競馬の魅力を感じられる作品を目標に、全力で制作していきます！<br>
      </div>
      <h3><midashi>プロセスメモ</midashi></h3>
      <div>
-     <div class="box2">■=考えないといけないことや疑問など　●=具体的にやること　→=やったこと</div><br>
-     ■ IoTをどのように活用するか考える。<br>
-     → システムの開始にQRコードを使う（今のところ）
+     <div class="box2">■：考えないといけないことや疑問など　●：具体的にやること　→：やったこと</div><br>
+     ■ 作品の詳細を決める。<br>
+     → モーターとギアを使って競走馬を動かす本体と、PCに映す着順掲示板を制作する。<br>
+     ● 名前を決める。<br>
+     → 数分の長考の結果「<kasen>卓上競馬ミニミニステークス</kasen>」に決定。いい名前だな。<br>
      <br>
-     ● dflinkを使ったQRコードのシステムを動作に組み込む。<br>
-     → Pygameがデータの変化をうまく読み取ってくれない...<br>
+     <font size="6">Python＆IoT</font><br>
+     <br>
+     ■ 着順掲示板をどのように再現するか考える。<br>
+     → <kasen>Pygame</kasen>を使って背景画像を全画面で表示し、その上に文字を表示させる。<br>
+     → 文字の色や配置を工夫することでかなりリアルなものができた！
+     <img src="./images/keijiban_1.png" width="60%"><br>
+     ● よりリアルに文字を表示させる。<br>
+     → 表示するタイミングをずらしたり明滅させることでかなりリアルになった！<br>
+     ● 音をつける。<br>
+     → <kasen>Pygame.mixer</kasen>を使ってwavファイルを再生することに成功！<br>
+     <br>
+     ■ IoTをどのように組み込むか考える。<br>
+     → QRコードを読み取ることでスタートできるようにする。<br>
+     ● dfLinkを使ったQRコードのシステムを動作に組み込む。<br>
+     → 端末keyでPythonと連携させ、サーバーのデータ値の変化を読み取ってもらうようにした。
+     → 残念ながらうまく動作しなかった。（<kasen_ao>通信に問題？</kasen_ao>）<br>
      ● QRコードの読み取りでPygameの動作を開始できるようにがんばる。<br>
+     → dfLInkからのデータを<kasen>リスト形式で定期的に取得する</kasen>ことで無事に動作した！<br>
      <br>
-     ■ ArduinoとPythonをうまく同時併用できるのか？<br>
-     ● Lチカで代用しながら↑のようなプログラムが動くか確かめる。<br>
-     → <kasen>Pythonの方でシリアル入力＆特定のワードをキャッチすることで連動した！</kasen><br>
-     ● モーターの動作が上手くいき次第あらためて同時に動かしてみる。<br>
-     → モーターは動作したが、その起爆剤であるPygameが全然うごかない。なんとかしたい。<br>
+     <font size="6">Arduino＆回路</font><br>
      <br>
-     ● 着順掲示板をPythonで再現する。<br>
-     → <kasen>Pygameを使って、作成した画像上に文字を出すことに成功！</kasen><br>
-     <img src="./images/keijiban_1.png" width="70%"><br>
-     ● プログラムをいじって動きを作る。<br>
-     → テキストごとに表示タイミングを変更して順番に表示されるようにした。<br>
-     ● なんか寂しいので効果音を導入する。<br>
-     → Pygame.mixerを使って音を鳴らすことに成功！ファンファーレや歓声があっていいかんじ<br>
-     
+     ■ ArduinoとPythonをうまく接続できるのか？<br>
+     ● Lチカで代用しながら連携できるか確かめる。<br>
+     → Pythonの方で<kasen>シリアル入力＆特定のワードを送信</kasen>することで連携できた！<br>
+     まとめるとこのような流れになります。<br>
+     <img src="./images/prosses.PNG" width="60%">
      <br>
+     ■ モーターを動かす回路を組む。<br>
      ● 購入する部品をリストアップする。<br>
-     → DCモーター、DCモータードライバ、電池ボックスを買う！<br>
-     → 電池ボックスは単三１本のものから２本のものに交換！<br>
-     ■ 安全に動作する回路を組む。<br>
-     → 下の図の回路を組んだ！...ものの<kasen_ao>動作しなかったので組み換え部品交換などを検討。</kasen_ao><br>
-     <img src="./images/kairo.png" width="70%">
-     ● モーターが動作するよう回路を改善する。<br>
-     → 回路を組みなおしても動作しないので、モータードライバを<kasen_ao>TC78H653FTG</kasen_ao>から<kasen>TB6612</kasen>に変更してみる。<br>
-     → 無事にモーターが動いた！<br>
-     ● モーターの速さを徐々に変えるプログラムを書く。<br>
-     → PWMAの値を変化させることでスピードを変化。<br>
-     ● 電池が異常に発熱してしまったので、安全に動作・停止するようコードを工夫する。<kasen_ao>（原因はスタンバイモードの設定ミス？）</kasen_ao><br>
-     → 念のためにモーター動作中以外はスタンバイモードをオフにする。<br>
+     → DCモーター、モータードライバ（<kasen>TC78H653FTG</kasen>）、電池ボックスを購入する。<br>
+     ● モータードライバを経由してDCモーターを動かす。<br>
+     → 悲しいことにまったく動作しない。（DCモーターの不良ではなさそう...）<br>
+     → モータードライバの電源電圧や回路も確認したが<kasen_ao>原因不明</kasen_ao>のため、新しいもの（<kasen>TB6612</kasen>）を購入した。<br>
+     ● 改めて回路を組む。<br>
+     → 下図の回路で無事にDCモーターが動作した！<br>
+     <img src="./images/kairozu.png" width="60%"><br>
+     ● 本体の歯車とつなげて動作するかテストする。<br>
+     → うまく動作しなかった。どうやら始動する際の<kasen_ao>停動電流が不足</kasen_ao>しているのが原因のよう。<br>
+     ● 電池を増やしてモーターが始動するか試してみる。<br>
+     → PWMAの値を調整して電池を４本まで増やしたが動かないので、モーターを<kasen>ギアボックスタイプ</kasen>に変更しトルクを稼いでみる。<br>
+     → 低速ながら単三電池２本でも始動した！うれしい！<br>
+     ● テスト中に電池が異常に発熱してしまったので原因を探る。<br>
+     → DCモーターが動作していないのにも関わらず電気が流れていたことが原因だと思われる。<br>
+     → 安全のため動作時以外はスタンバイモードをオフに設定し、電池ボックスもスイッチ付きのものに変更した。<br>
      <br>
-     ■ 作品のガワと内部機構の考えをまとめる。<br>
-     ● どのような構造で競走馬を動かすか考える<br>
-     → 歯車にカムを付ける形で上下させる！<br>
-     ● 作品本体のサイズ感を決める。（他の作品がデカそうなのでちょっと大きめにしたい...）<br>
-     → 画像のようなサイズ感で制作していく。ほどよい。<br>
-     <img src="./images/size_sketch.png" width="70%"><br>
-     ● Fusionで競走馬を動かす機構を設計してテストする。<br>
-     → 歯車部分のプロトタイプが完成！動作に問題ないので量産したい。<br>
-     <img src="./images/gear_1.png" width="70%"><br>
-     ● 全パーツが完成したので組み立てる。<br>
-     → 本体組み立て完了！干渉もせずちょうどいいサイズ感。<br>
+     <font size="6">本体</font><br>
      <br>
+     ■ 本体をどのように制作するか考える。<br>
+     → 外側の箱はレーザーカットでMDFを加工、歯車などは3Dプリンターで出力する。<br>
+     ● サイズ感を決める。<br>
+     → 下図のサイズ感をもとに製作する。<br>
+     <img src="./images/size_sketch.png" width="60%"><br>
+     ● 歯車をスケッチする。<br>
+     → FusionのSuperGearアドオンでベースを設計し、カム部分をスケッチで追加した。<br>
+     → 周辺パーツと一緒に試作品をプリント。問題なく動くので量産する。<br>
+     <img src="./images/gear_1.png" width="60%"><br>
+     ● レーザーカットするデータを作って組み立てる。<br>
+     → 上述したものと近いサイズ感で作成したが、歯車どうしの間隔が空きすぎてしまった。<br>
+     → 横幅を2cmほど小さくして再度組み立てた。かなりいい感じ！<br>
+     <img src="./images/uma_2.png" width="60%"><br>
+     ● カム部分の従動節が干渉してうまく回らない問題をなんとかする。<br>
+     → 従動節が穴のサイズに対してやや小さくずれてしまうのが原因だった。<br>
+     → 従動節を安定させるサポートパーツを取り付けることでスムーズに動いた！<br>
+     <img src="./images/uma_1.png" width="60%"><br>
+     <br>
+     ■ 競走馬はなにで作る？<br>
+     → できれば3Dプリントで立体的に作る！<br>
+     → 時間があまりなさそうなので、簡易的にイラストを印刷して貼ってみる。<br>
+     <img src="./images/uma_3.png" width="60%"><br>
+     → 意外とかわいいのでこれでもいいか...の気持ちになっている。<br>
      </div>
      <h3><midashi>動画</midashi></h3>
      <div class="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/dz2x7AKasA8?si=AwGv3q3Q__HlQfgz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
      </div>
-
+     <h3><midashi>使用品</midashi></h3>
+     <div>
+     ▼ DCモーター<br>
+     <a href="https://www.tamiya.com/japan/products/70188/index.html" target="_blank" class="btn_03">タミヤ ミニモーター標準ギヤボックス 8速</a><br>
+     ▼ モータードライバ<br>
+     <a href="https://akizukidenshi.com/catalog/g/g116947/" target="_blank" class="btn_03">TB6612モータードライバー ブレークアウトボードキット</a><br>
+     ▼ 電池ボックス<br>
+     <a href="https://www.elpadirect.jp/products/4901087197675/" target="_blank" class="btn_03">エルパ M-SC32NH</a>
      </div>
     </main>
      <br>
