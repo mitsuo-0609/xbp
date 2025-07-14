@@ -150,6 +150,11 @@ midashi {
     border-style: solid;
     border-color: #1b2e52 transparent transparent transparent;
   }
+
+midashi_sen {
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 5px #1b2e52;
+}
 m2 {
     position: relative;
     line-height: 1.4;
