@@ -124,6 +124,10 @@ kasen2{
     padding: 0.1em;/*文字周りの余白*/
     border-radius: 0.5em;/*角丸*/
 }
+midashi_sen {
+  /*線の種類（二重線）太さ 色*/
+  border-bottom: double 5px #1b2e52;
+}
 midashi {
     position: relative;
     padding-top: 5px;
