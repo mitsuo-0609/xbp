@@ -171,6 +171,16 @@ m2 {
     border-bottom: solid 2px #1b2e52;
     right: 0;
 }
+.box2 {
+    padding: 1em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #1b2e52;/*文字色*/
+    background: #fffffff1;
+    border: solid 3px #1b2e52;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    max-width:fit-content;
+}
 a.btn_02 {
 	display: block;
 	text-align: center;
