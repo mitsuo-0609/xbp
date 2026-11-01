@@ -1,8 +1,6 @@
 @charset "utf-8";
-/* 冒頭でimport */
 @import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
-/* フォントを指定したいところで */
 
 header{
     text-align: center;
@@ -16,9 +14,10 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* コンテンツの下に潜り込まないよう数値を高くする */
+    z-index: 1000;
     text-decoration: none;
 }
+
 body {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -35,9 +34,11 @@ main{
     padding-right: 30px;
     color: #242424;
     background-color: #f2f2f299;
+    min-height: 100dvh;
 }
+
 h1{
-   text-align: center;
+    text-align: center;
     color: #f2f2f2;
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 800;
@@ -73,31 +74,35 @@ h3{
     font-size: 30px;
     color: #f2f2f2;
 }
+
 div{
     margin-top: 1em;
     margin-left: 3em;
 }
+
 p{
     margin-top: 30px;
 }
+
 span.blackback{
     text-indent: 3em;
     background: #242424;
     color: #f2f2f2;
 }
+
 a{
     color: #242424;
     text-decoration: none;
 }
-sen{
-    border-bottom: dashed 3px #ffffff;
-}
-kasen_ao{
-    background: linear-gradient(transparent 70%, #afaef7 70%);
-}
+
 kasen{
-    background: linear-gradient(transparent 70%, #ffe380 70%);
+    background: linear-gradient(transparent 70%, #ffd747 70%);
 }
+
+kasen_ao{
+    background: linear-gradient(transparent 70%, #7876de 70%);
+}
+
 midashi {
     position: relative;
     padding-top: 5px;
@@ -108,7 +113,7 @@ midashi {
     border-radius: 10px;
     background: #242424;
   }
-  midashi:after {
+midashi:after {
     position: absolute;
     bottom: -9px;
     left: 1em;
@@ -123,6 +128,7 @@ midashi {
 midashi_sen {
   border-bottom: double 5px #242424;
 }
+
 m2 {
     position: relative;
     line-height: 1.4;
@@ -130,7 +136,7 @@ m2 {
     display: inline-block;
     top:0;
   }
- m2:before, m2:after { 
+m2:before, m2:after { 
     position: absolute;
     top: 0;
     content:'';
@@ -138,40 +144,20 @@ m2 {
     height: 100%;
     display: inline-block;
   }
- m2:before {
+m2:before {
     border-left: solid 2px #f2f2f2;
     border-top: solid 2px #f2f2f2;
     border-bottom: solid 2px #f2f2f2;
     left: 0;
   }
- m2:after {
+m2:after {
     content: '';
     border-top: solid 2px #f2f2f2;
     border-right: solid 2px #f2f2f2;
     border-bottom: solid 2px #f2f2f2;
     right: 0;
 }
-a.btn_02 {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-    font-size: x-large;
-	width: 80%;
-	margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 8.2%;
-	padding-top: 30px;
-    padding-bottom: 30px;
-	font-weight: bold;
-	border: 2px solid #1b2e52;
-	background: #1b2e52;
-	color: #fffffff1;
-	transition: 0.5s;
-}
-a.btn_02:hover {
-	color: #1b2e52;
-	background: #fffffff1;
-}
+
 b{
     font-weight: 800;
     font-size: 23px;
@@ -184,12 +170,12 @@ img{
 a.btn {
     display: inline-block;
     width: 100%;
-    max-width: 350px; /* ボタン幅 */
-    color: #242424; /* 文字色 */
-    border: 3px solid #242424; /* 線幅・種類・色 */
-    background: transparent; /* 背景色 */
+    max-width: 350px;
+    color: #242424;
+    border: 3px solid #242424;
+    background: transparent;
     padding: 1em 2em;
-    font-weight: bold; /* 文字の太さ */
+    font-weight: bold;
     text-decoration: none;
     text-align: center;
     transition: 0.3s;
@@ -197,8 +183,8 @@ a.btn {
     margin-bottom: 10px;
   }
   a.btn:hover {
-    color: #f2f2f2; /* 文字色 */
-    background: #242424; /* 背景色 */
+    color: #f2f2f2;
+    background: #242424;
   }
   a.btn_02 {
 	display: block;
@@ -245,9 +231,9 @@ a.btn_03:hover {
     padding: 1em 1em;
     margin: 2em 0;
     font-weight: bold;
-    color: #242424;/*文字色*/
+    color: #242424;
     background: transparent;
-    border: solid 3px #242424;/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px #242424;
+    border-radius: 10px;
     max-width:fit-content;
 }

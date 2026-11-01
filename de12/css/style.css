@@ -1,28 +1,23 @@
 @charset "utf-8";
-/* 冒頭でimport */
 @import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
-/* フォントを指定したいところで */
-
 
 header{
     text-align: center;
+    color: #242424;
     font-family: "Century Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #242424;
     background-color: #f2f2f2;
     padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* コンテンツの下に潜り込まないよう数値を高くする */
+    z-index: 1000;
     text-decoration: none;
 }
 
-
-/* ========== common ========== */
 body {
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -39,7 +34,9 @@ main{
     padding-right: 30px;
     color: #242424;
     background-color: #f2f2f299;
+    min-height: 100dvh;
 }
+
 h1{
     text-align: center;
     color: #f2f2f2;
@@ -66,34 +63,6 @@ h2{
     padding-top: 30px;
     padding-bottom: 20px;
 }
-m2 {
-    position: relative;
-    line-height: 1.4;
-    padding:0.25em 1em;
-    display: inline-block;
-    top:0;
-  }
- m2:before, m2:after { 
-    position: absolute;
-    top: 0;
-    content:'';
-    width: 8px;
-    height: 100%;
-    display: inline-block;
-  }
- m2:before {
-    border-left: solid 2px #f2f2f2;
-    border-top: solid 2px #f2f2f2;
-    border-bottom: solid 2px #f2f2f2;
-    left: 0;
-  }
- m2:after {
-    content: '';
-    border-top: solid 2px #f2f2f2;
-    border-right: solid 2px #f2f2f2;
-    border-bottom: solid 2px #f2f2f2;
-    right: 0;
-}
 h3{
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
@@ -105,31 +74,35 @@ h3{
     font-size: 30px;
     color: #f2f2f2;
 }
+
 div{
     margin-top: 1em;
     margin-left: 3em;
 }
+
 p{
     margin-top: 30px;
 }
-pp{
-    margin-top: 70px;
-}
+
 span.blackback{
     text-indent: 3em;
-    background: #393939;
-    color: #efefef;
+    background: #242424;
+    color: #f2f2f2;
 }
+
 a{
     color: #242424;
     text-decoration: none;
 }
-a span{ 
-    text-decoration: none;
-}
+
 kasen{
-    background: linear-gradient(transparent 70%, #ffdb57 70%);
+    background: linear-gradient(transparent 70%, #ffd747 70%);
 }
+
+kasen_ao{
+    background: linear-gradient(transparent 70%, #7876de 70%);
+}
+
 midashi {
     position: relative;
     padding-top: 5px;
@@ -140,8 +113,7 @@ midashi {
     border-radius: 10px;
     background: #242424;
   }
-  
-  midashi:after {
+midashi:after {
     position: absolute;
     bottom: -9px;
     left: 1em;
@@ -152,11 +124,69 @@ midashi {
     border-style: solid;
     border-color: #242424 transparent transparent transparent;
   }
-  midashi_sen {
-  /*線の種類（二重線）太さ 色*/
+
+midashi_sen {
   border-bottom: double 5px #242424;
 }
-a.btn_02 {
+
+m2 {
+    position: relative;
+    line-height: 1.4;
+    padding:0.25em 1em;
+    display: inline-block;
+    top:0;
+  }
+m2:before, m2:after { 
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+  }
+m2:before {
+    border-left: solid 2px #f2f2f2;
+    border-top: solid 2px #f2f2f2;
+    border-bottom: solid 2px #f2f2f2;
+    left: 0;
+  }
+m2:after {
+    content: '';
+    border-top: solid 2px #f2f2f2;
+    border-right: solid 2px #f2f2f2;
+    border-bottom: solid 2px #f2f2f2;
+    right: 0;
+}
+
+b{
+    font-weight: 800;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+img{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+a.btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    color: #242424;
+    border: 3px solid #242424;
+    background: transparent;
+    padding: 1em 2em;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  a.btn:hover {
+    color: #f2f2f2;
+    background: #242424;
+  }
+  a.btn_02 {
 	display: block;
 	text-align: center;
 	text-decoration: none;
@@ -178,37 +208,6 @@ a.btn_02:hover {
 	background: #f2f2f240;
     border: 3px solid #f2f2f2;
 }
-b{
-    font-weight: 800;
-    font-size: 23px;
-    margin-bottom: 20px;
-}
-img{
-    padding-top: 20px;
-    padding-bottom: 15px;
-}
-haikei{
-    background: #92a2aa;
-}
-a.btn {
-    display: inline-block;
-    width: 100%;
-    max-width: 350px; /* ボタン幅 */
-    color: #242424; /* 文字色 */
-    border: 3px solid #242424; /* 線幅・種類・色 */
-    background: transparent; /* 背景色 */
-    padding: 1em 2em;
-    font-weight: bold; /* 文字の太さ */
-    text-decoration: none;
-    text-align: center;
-    transition: 0.3s;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  a.btn:hover {
-    color: #f2f2f2; /* 文字色 */
-    background: #242424; /* 背景色 */
-  }
   a.btn_03 {
 	display: inline-block;
 	text-decoration: none;
@@ -227,4 +226,14 @@ a.btn {
 a.btn_03:hover {
 	color: #f2f2f2;
 	background: #242424;
+}
+.box2 {
+    padding: 1em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #242424;
+    background: transparent;
+    border: solid 3px #242424;
+    border-radius: 10px;
+    max-width:fit-content;
 }
